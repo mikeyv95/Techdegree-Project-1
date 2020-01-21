@@ -29,13 +29,11 @@ var officeQuotes = [
         quote : "Did I stutter?", 
         source : "Stanley Hudson", 
         episode : "Season 4, Did I stutter?",
-        year : "2007"
     },
 
     {
         quote : "Fact: Bears eat beets. Bears. Beets. Battlestar Galactica.", 
         source : "Jim Halpert",
-        episode : "Season 3, Product Recall",
         year : "2007"
     } 
   ];
@@ -56,8 +54,8 @@ function printQuote() {
     message  = '<p class = "quote">' + officeQuotes.quote + '</p>';
     message += '<p class = "source">' + officeQuotes.source + '</p>';
     
-    if (officeQuotes.citation) {
-        message += '<p class="citation">' + officeQuotes.citation + '</p>';
+    if (officeQuotes.episode) {
+        message += '<p class="episode">' + officeQuotes.episode + '</p>';
       }
 
     if (officeQuotes.year) {
