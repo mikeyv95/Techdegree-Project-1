@@ -39,7 +39,6 @@ var officeQuotes = [
 function getRandomQuote() {
     var randomQuote = Math.floor(Math.random() * officeQuotes.length);
     return officeQuotes[randomQuote];
-    document.getElementById('quote-box').innerHTML = officeQuotes[randomQuote];
 }
 
 /* the printQuote function will print the above selected random quote*/
@@ -57,6 +56,8 @@ function printQuote() {
     if (officeQuotes.year) {
         message += '<p class="year">' + officeQuotes.year + '</p>';
       }
+ document.getElementById('quote-box').innerHTML = message;
+
 }
 
 
