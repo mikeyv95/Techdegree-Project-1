@@ -46,20 +46,18 @@ function getRandomQuote() {
 function printQuote() {
     var result = getRandomQuote();
     var message = ' ';
-    message  = '<p class = "quote">' + officeQuotes.quote + '</p>';
-    message += '<p class = "source">' + officeQuotes.source + '</p>';
+    message  = '<p class = "quote">' + result.quote + '</p>';
+    message += '<p class = "source">' + result.source + '</p>';
     
-    if (officeQuotes.episode) {
-        message += '<p class="episode">' + officeQuotes.episode + '</p>';
+    if (result.episode) {
+        message += '<p class="episode">' + result.episode + '</p>';
       }
 
-    if (officeQuotes.year) {
-        message += '<p class="year">' + officeQuotes.year + '</p>';
+    if (result.year) {
+        message += '<p class="year">' + result.year + '</p>';
       }
- document.getElementById('quote-box').innerHTML = message;
-
+    document.getElementById('quote-box').innerHTML = print;
 }
-
 
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
