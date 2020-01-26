@@ -1,35 +1,36 @@
 /*start off the Random Quote project with quotes from The Office using objects within an array*/
 
-var officeQuotes = [
+var Quotes = [
 	{	quote : '"Sometimes I’ll start a sentence and I don’t even know where it’s going. I just hope I find it along the way."',
 		source : "Michael Scott",
-        episode : "Season 5, The Duel",
+        citation : "Season 5, The Duel",
         year : "2008"
     },
 
-	{	quote : "Yes",
+	{	quote : "Why are you the way that you are?",
 		source : "Michael Scott",
-        episode : "Season 5, Stress Relief: Part 1",
-        year : "2008"
+        citation : "Season 2, Casino Night",
+        year : "2006"
     },
 
    
     {
         quote : "I am Beyoncé, always.",
         source : "Michael Scott", 
-        episode : "Season 6, The Chump",
+        citation : "Season 6, The Chump",
         year : "2009"
     },
      
     { 
         quote : "Did I stutter?", 
         source : "Stanley Hudson", 
-        episode : "Season 4, Did I stutter?",
+        citation : "Season 4, Did I stutter?",
     },
 
     {
         quote : "Fact: Bears eat beets. Bears. Beets. Battlestar Galactica.", 
         source : "Jim Halpert",
+        citation : "Season 3, Product Recall",
         year : "2007"
     } 
   ];
@@ -37,8 +38,8 @@ var officeQuotes = [
 /* the getRandomQuote function will pull a random quote from the array above*/
 
 function getRandomQuote() {
-    var randomQuote = Math.floor(Math.random() * officeQuotes.length);
-    return officeQuotes[randomQuote];
+    var randomQuote = Math.floor(Math.random() * Quotes.length);
+    return Quotes[randomQuote];
 }
 
 /* the printQuote function will print the above selected random quote*/
@@ -49,14 +50,14 @@ function printQuote() {
     message  = '<p class = "quote">' + result.quote + '</p>';
     message += '<p class = "source">' + result.source + '</p>';
     
-    if (result.episode) {
-        message += '<p class="episode">' + result.episode + '</p>';
+    if (result.citation) {
+        message += '<p class="citation">' + result.citation + '</p>';
       }
 
     if (result.year) {
         message += '<p class="year">' + result.year + '</p>';
       }
-    document.getElementById('quote-box').innerHTML = print;
+    document.getElementById('quote-box').innerHTML = message;
 }
 
 
